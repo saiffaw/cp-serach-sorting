@@ -1,0 +1,31 @@
+
+FUNCTION insertion_sort(arr,n)
+VAR
+    i,j,picked_element:INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1p  DO
+        picked_element:=arr[i];
+        j:=i-1;
+        WHILE (j>=0 AND arr[j] > picked_element ) DO
+            arr[j+1]:=arr[j];
+            j:=j-1;
+        END_WHILE
+        arr[j+1]:=picked_element;
+    END_FOR
+    
+END
+
+
+
+
+
+ALGORITHM insertion_sort
+VAR
+    arr : ARRAY_OF INTEGER;
+    n:INTEGER;
+BEGIN
+    Read(arr) // Read should be made with loop
+    n:=length.arr
+    insertion_sort(VAR arr,n);
+    Write(arr)// Write should be with loop 
+END
